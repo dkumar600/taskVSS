@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p id="colorN"></p>
+    </div>
+    <div id="inner">
+        <input type="text" id="color" placeholder="Enter color Name or Code">
+        <button onclick="myfunc1()">submit</button>
+    </div>
+    <script>
+        let text1 = document.createElement("ul");
+        
+        const name = ["Rahul","Ankit","Sahil","Mitesh"];
+        for(let i=0;i<4;i++){
+            let text2=document.createElement("li");
+            text2.innerText = name[i];
+            text1.appendChild(text2);
+            
+        }
+        document.getElementById("container").appendChild(text1);
+        function myfunc1(){
+            let c = document.getElementById("color").value;
+            document.getElementById("container").style.color=c;
+            document.getElementById("color").value="";
+            c=c.toUpperCase();
+            document.getElementById("colorN").innerText=c;
+        }
+    </script>
+</body>
+</html>
