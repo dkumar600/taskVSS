@@ -6,29 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .container-ka-baap{
+            display: flex;
+
+        }
         .container{
             height:185px;
             width:140px;
-            position:absolute;
-            transform: scale(0.8);
+            position:static;
+            transform: scale(1.0);
+            transition: 0.2s;
         }
         .Info{
+            display: block;
+            height:45%;
+            transform: scale(1.0);
+            transition: 0.2s;
             visibility: hidden;
             position:absolute;
-            top:50%;
+            padding:20px 6px 6px 4px;
+            top:42%;
             left:0;
-            width:100%;
-            font-size:12px;
+            width:calc(100%-12px);
+            font-size:11px;
             color:white;
-            background-color: rgba(41, 41, 41, 0.726);
+            background-image: linear-gradient(to bottom, rgba(4,8,15,0), #192133, #192133);
         }
         .title{
             font-size: 16px;
         }
-        .container:hover .Info,.container:hover{
-            visibility: visible;
-            transform: scale(1);
+        .container:hover{
+            transform: scale(1.1);
+            z-index: 4;
         }
+        .Info:hover{
+        }
+        .container:hover .Info{
+            visibility: visible;
+        }
+        .disc{
+            height:20%;
+            width:50%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: left;
+        }
+        .buttn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:auto;
+            width:80%;
+            height:15px;
+            text-transform: uppercase;
+
+        }
+        .buttn:hover{
+            background-color: #314164d8;
+
+        }
+        .b{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         
         
     </style>
@@ -47,9 +90,47 @@
             <div class="disc-subinfo">
                 2 hr 1 min,Thriller, Malayalam, Hindi, Tamil, Telugu, 2023
             </div>
+            <div class="disc">During the pandemic, Kalidasan gets stranded in his newly rented flat which turns out to be haunted. ...
+            </div>
+            <div class="b">
+            <div class="buttn" style="font-size: 10px;">+ add to watchlist</div></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="photo">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9310/1479310-v-644f76c4ffe5"
+                alt="" height="185px" width="140px">
+        </div>
+        <div class="Info">
+            <div class="title">
+                Alone
+            </div>
+            <div class="disc-subinfo">
+                2 hr 1 min,Thriller, Malayalam, Hindi, Tamil, Telugu, 2023
+            </div>
+            <div class="disc">During the pandemic, Kalidasan gets stranded in his newly rented flat which turns out to be haunted. ...
+            </div>
+            <div class="b">
+                <div class="buttn" style="font-size: 10px;">+ add to watchlist</div></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="photo">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9310/1479310-v-644f76c4ffe5"
+                alt="" height="185px" width="140px">
+        </div>
+        <div class="Info">
+            <div class="title">
+                Alone
+            </div>
+            <div class="disc-subinfo">
+                2 hr 1 min,Thriller, Malayalam, Hindi, Tamil, Telugu, 2023
+            </div>
             <div class="disc">
                 During the pandemic, Kalidasan gets stranded in his newly rented flat which turns out to be haunted. ...
             </div>
+            <div class="b">
+                <div class="buttn" style="font-size: 10px;">+ add to watchlist</div></div>
         </div>
     </div>
 </div>
