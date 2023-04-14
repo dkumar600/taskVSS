@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+<body>
+    <section class="demo">
+            <input type="text" placeholder="Label" id="text">
+            <input type="text" placeholder="placeholder" id="place">
+            <select name="Yes" id="elem">
+                <option value="text">Text Input</option>
+                <option value="checkbox">Checkox</option>
+                <option value="date">Date</option>
+                <option value="password">Password</option>
+                <option value="radio">Radio</option>
+            </select>
+            <input type="button" value="Add" onclick="createElem()">
+    </section>
+    <section class="container" id="container">
+
+    </section>
+        <script>
+            function createElem() {
+                let label = document.getElementById("text").value;
+                let place = document.getElementById("place").value;
+                let select = document.getElementById("elem").value;
+                console.log(label,place,select);
+                createElem2(label,place,select);
+                
+                let c = document.getElementById("elem");
+                c.selectedIndex = 0;
+            }
+            function createElem2(label1,place1,select1){
+                let node0 = document.createElement("div");
+                let node1 = document.createElement("label");
+                let id = "";
+                id = "id";
+                node1.setAttribute("for",id);
+                node1.append(label1);
+                node0.appendChild(node1);
+                let node2 = document.createElement("input");
+                node2.setAttribute("type",select1);
+                node2.setAttribute("placeholder",place1);
+                node2.setAttribute("id", id)
+                node0.appendChild(node2);
+                let a = document.getElementById("container");
+                a.appendChild(node0);
+                console.log(node0);
+                let d = document.getElementById("text");
+                d.value="";
+                let e = document.getElementById("place");
+                e.value="";
+                
+
+            }
+        </script>
+</body>
+</html>
